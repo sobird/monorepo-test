@@ -1,5 +1,7 @@
 # monorepo-test
 
+> main package
+
 To install dependencies:
 
 ```bash

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/sobird/monorepo-test/compare/v1.3.0...v1.4.0) (2026-04-16)
+
+
+### Features
+
+* **pkg-a:** just test pkg-a ([f01e160](https://github.com/sobird/monorepo-test/commit/f01e160a22e163d8cfae9da018f4f3a5ba299153))
+
 ## [1.3.0](https://github.com/sobird/monorepo-test/compare/v1.2.0...v1.3.0) (2026-04-16)
 
 

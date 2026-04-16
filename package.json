@@ -1,0 +1,19 @@
+{
+  "name": "monorepo-test",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "pkg-a": "workspace:*",
+    "pkg-b": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "release-please": "^17.6.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

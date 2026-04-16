@@ -1,16 +1,21 @@
 {
-  "$schema": "./node_modules/release-please/schemas/config.json",
   "plugins": [{
     "type": "node-workspace",
     "updatePeerDependencies": true
   }],
   "release-type": "node",
   "packages": {
+    ".": {
+      "release-type": "node",
+      "package-name": "monorepo-test"
+    },
     "packages/pkg-a": {
       "release-type": "node",
+      "package-name": "pkg-a",
       "initial-version": "0.0.1"
     }
   },
+  "separate-pull-requests": true,
   "pull-request-header": "## 🚀 发现新版本",
   "pull-request-footer": " "
 }

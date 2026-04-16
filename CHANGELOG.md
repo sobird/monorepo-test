@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/sobird/monorepo-test/compare/v1.4.0...v1.5.0) (2026-04-16)
+
+
+### Features
+
+* test it ([b73213c](https://github.com/sobird/monorepo-test/commit/b73213c1c13fa9ecb602a9524a25b0ab63d7da7b))
+
 ## [1.4.0](https://github.com/sobird/monorepo-test/compare/v1.3.0...v1.4.0) (2026-04-16)
 
 

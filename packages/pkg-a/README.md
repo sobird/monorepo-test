@@ -1,5 +1,7 @@
 # pkg-a
 
+> This is sub package pkg-a
+
 To install dependencies:
 
 ```bash

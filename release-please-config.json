@@ -1,11 +1,16 @@
 {
   "$schema": "./node_modules/release-please/schemas/config.json",
-  "plugins": ["node-workspace"],
+  "plugins": [{
+    "type": "node-workspace",
+    "updatePeerDependencies": true
+  }],
   "release-type": "node",
   "packages": {
     "packages/pkg-a": {
+      "release-type": "node",
       "initial-version": "0.0.1"
     }
   },
+  "pull-request-header": "## 🚀 发现新版本",
   "pull-request-footer": " "
 }

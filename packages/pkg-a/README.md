@@ -1,6 +1,6 @@
 # pkg-a
 
-> This is sub package pkg-a, stub
+> This is sub package pkg-a
 
 To install dependencies:
 

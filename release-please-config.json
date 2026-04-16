@@ -1,8 +1,4 @@
 {
-  "plugins": [{
-    "type": "node-workspace",
-    "updatePeerDependencies": true
-  }],
   "release-type": "node",
   "packages": {
     ".": {
@@ -17,5 +13,5 @@
   },
   "separate-pull-requests": true,
   "pull-request-header": "## 🚀 发现新版本",
-  "pull-request-footer": " "
+  "pull-request-footer": ""
 }

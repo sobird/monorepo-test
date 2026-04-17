@@ -2,6 +2,9 @@
   "name": "monorepo-test",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "build": "node-gyp rebuild"
+  },
   "dependencies": {
     "node-gyp": "^12.2.0",
     "pkg-a": "workspace:*",

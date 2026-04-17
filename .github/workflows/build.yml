@@ -24,7 +24,6 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24
-          cache: yarn
 
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2
@@ -35,8 +34,7 @@ jobs:
         run: bun install
 
       - name: Build
-        run: node-gyp rebuild
-        shell: bash
+        run: bun run build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7

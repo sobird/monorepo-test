@@ -1,0 +1,46 @@
+# https://github.com/actions/runner-images
+
+name: CI
+env:
+  DEBUG: napi:*
+  APP_NAME: my-napi
+  MACOSX_DEPLOYMENT_TARGET: '10.13'
+  CARGO_INCREMENTAL: '1'
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-26-intel
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: yarn
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: .bun-version
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build
+        run: node-gyp rebuild
+        shell: bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: bindings-${{ matrix.settings.target }}
+          path: build/Release/modifiers.node
+          if-no-files-found: error
